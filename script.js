@@ -105,13 +105,15 @@ document.querySelectorAll('.skill-tag').forEach(tag => {
   });
 });
 
-// ── CONTACT CARD ACTIVE GLOW ──────────────────────────────────
+// ── CONTACT CARD ACTIVE SHADOW ────────────────────────────────
 document.querySelectorAll('.contact-card').forEach(card => {
   card.addEventListener('mouseenter', () => {
-    card.style.boxShadow = '0 0 32px rgba(99,179,237,0.15)';
+    // Add the flat offset shadow
+    card.style.boxShadow = '4px 4px 0 #6b4226';
   });
   card.addEventListener('mouseleave', () => {
-    card.style.boxShadow = '';
+    // Return to the small shadow
+    card.style.boxShadow = '2px 2px 0 #a07850';
   });
 });
 
