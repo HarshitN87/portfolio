@@ -1,0 +1,260 @@
+.ai-hub
+    .content
+        max-width 850px
+        width calc(100vw - 40px)
+        
+        @media only screen and (max-width 870px)
+            width 750px
+        
+        @media only screen and (max-width 780px)
+            width 600px
+        
+        @media only screen and (max-width 640px)
+            width calc(100vw - 30px)
+            padding 15px
+            
+    .terminal-container
+        display flex
+        gap 20px
+        border 1px solid #ff7a00
+        background #0d0912
+        font-family monospace
+        border-radius 6px
+        overflow hidden
+        min-height 380px
+        
+        @media only screen and (max-width 700px)
+            flex-direction column
+            min-height 480px
+
+    .terminal-sidebar
+        width 180px
+        background #160e1c
+        border-right 1px solid #ff7a00
+        display flex
+        flex-direction column
+        padding 10px 0
+        
+        @media only screen and (max-width 700px)
+            width 100%
+            flex-direction row
+            border-right none
+            border-bottom 1px solid #ff7a00
+            padding 5px
+            flex-wrap wrap
+            gap 5px
+
+    .terminal-tab-btn
+        background transparent
+        border none
+        color #8b719c
+        text-align left
+        padding 12px 18px
+        font-family monospace
+        font-size 0.95rem
+        cursor pointer
+        transition all 0.2s
+        outline none
+        
+        @media only screen and (max-width 700px)
+            flex 1
+            text-align center
+            padding 8px
+
+        &:hover
+            color #ff7a00
+            background rgba(255, 122, 0, 0.05)
+
+        &.active
+            color #ffffff
+            font-weight bold
+            background rgba(255, 122, 0, 0.15)
+            border-left 3px solid #ff7a00
+            
+            @media only screen and (max-width 700px)
+                border-left none
+                border-bottom 3px solid #ff7a00
+
+    .terminal-body
+        flex 1
+        padding 20px
+        display flex
+        flex-direction column
+        color #cdaade
+        overflow hidden
+        
+        @media only screen and (max-width 520px)
+            padding 12px
+
+    .terminal-tab-content
+        display none
+        flex-direction column
+        height 100%
+        flex 1
+
+        &.active
+            display flex
+
+    .terminal-header
+        font-size 1.1rem
+        color #ff7a00
+        margin-bottom 15px
+        border-bottom 1px dashed rgba(255, 122, 0, 0.3)
+        padding-bottom 8px
+
+    .terminal-desc
+        font-size 0.9rem
+        margin-bottom 15px
+        color #8b719c
+
+    .chat-container
+        flex 1
+        background #07040a
+        border 1px solid #281a33
+        border-radius 4px
+        padding 12px
+        overflow-y auto
+        max-height 200px
+        min-height 150px
+        display flex
+        flex-direction column
+        gap 10px
+        margin-bottom 15px
+
+    .chat-message
+        padding 8px 12px
+        border-radius 6px
+        max-width 85%
+        font-size 0.9rem
+        line-height 1.4
+
+        &.bot
+            background #1c1124
+            color #dfcced
+            align-self flex-start
+            border-left 3px solid #ff7a00
+            
+            &.thinking
+                color #ff7a00
+                font-style italic
+
+        &.user
+            background #ff7a00
+            color #000000
+            align-self flex-end
+            font-weight bold
+
+    .terminal-input-row
+        display flex
+        gap 10px
+        
+    .terminal-select
+        flex 1
+        background #160e1c
+        border 1px solid #ff7a00
+        color #ffffff
+        padding 10px
+        border-radius 4px
+        font-family monospace
+        outline none
+        cursor pointer
+
+    .terminal-input
+        flex 1
+        background #160e1c
+        border 1px solid #ff7a00
+        color #ffffff
+        padding 10px
+        border-radius 4px
+        font-family monospace
+        outline none
+
+    .terminal-btn
+        background #ff7a00
+        border none
+        color #000000
+        font-weight bold
+        padding 10px 20px
+        border-radius 4px
+        cursor pointer
+        font-family monospace
+        transition all 0.2s
+
+        &:hover
+            background #ff9d42
+
+    .terminal-output
+        flex 1
+        background #07040a
+        border 1px solid #281a33
+        border-radius 4px
+        padding 12px
+        overflow-y auto
+        color #00ff66
+        font-size 0.9rem
+        line-height 1.5
+        min-height 120px
+
+    .loading
+        color #ff7a00
+        font-style italic
+
+    .roadmap-step
+        display flex
+        gap 15px
+        margin-bottom 12px
+        border-left 2px solid #ff7a00
+        padding-left 15px
+        position relative
+        
+        &:last-child
+            margin-bottom 0
+
+        .step-num
+            background #ff7a00
+            color #000000
+            font-weight bold
+            width 24px
+            height 24px
+            border-radius 12px
+            display flex
+            align-items center
+            justify-content center
+            position absolute
+            left -13px
+            top 0
+            font-size 0.85rem
+
+        .step-name
+            font-weight bold
+            color #ffffff
+            font-size 0.95rem
+            margin-bottom 2px
+
+        .step-desc
+            color #8b719c
+            font-size 0.85rem
+
+    .analyzer-result
+        color #dfcced
+        display flex
+        flex-direction column
+        gap 8px
+
+        .badge
+            padding 2px 6px
+            border-radius 3px
+            font-weight bold
+            font-size 0.8rem
+            text-transform uppercase
+            display inline-block
+            
+            &.informative
+                background #00aa50
+                color #ffffff
+            &.outdated
+                background #ff3333
+                color #ffffff
+            &.redundant
+                background #ffaa00
+                color #000000
